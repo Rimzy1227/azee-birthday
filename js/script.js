@@ -449,7 +449,7 @@ function initEasterEgg() {
       const message = document.createElement('div');
       message.className = 'fortune-box show';
       message.style.marginTop = '1.5rem';
-      message.textContent = 'You found the secret. Okay... you are officially too curious 😂 Happy Birthday again!';
+      message.textContent = 'You found the secret. Okay... you are officially too curious 😂 Happy Birthday to my favorite Azee Kutty!';
       const parent = document.querySelector('.question-wall') || document.querySelector('.final-card');
       if (parent) parent.appendChild(message);
       star.remove();
