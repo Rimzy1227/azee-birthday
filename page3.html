@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memories</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="page3">
+    <button class="music-toggle" type="button" aria-label="Toggle music">♫</button>
+
+    <main class="page-shell page-quiet">
+      <div class="starfield" aria-hidden="true"></div>
+      <div class="sparkles" aria-hidden="true"></div>
+
+      <div class="progress-indicator" aria-label="Page progress"></div>
+
+      <div class="page container">
+        <section class="section-heading">
+          <div class="kicker">A little collection</div>
+          <h2>A Little Collection of Moments 📸</h2>
+          <button class="gallery-showcase-btn" type="button" data-play-gallery>Play all memories ✨</button>
+        </section>
+
+        <div class="memory-grid all-but-me-gallery" aria-label="Memory gallery">
+          <figure class="photo-card" tabindex="0">
+            <img src="images/photo1.svg" alt="Memory 1" />
+            <figcaption>One of those moments worth remembering.</figcaption>
+          </figure>
+          <figure class="photo-card" tabindex="0">
+            <img src="images/photo2.svg" alt="Memory 2" />
+            <figcaption>A simple day that became a good memory.</figcaption>
+          </figure>
+          <figure class="photo-card" tabindex="0">
+            <img src="images/photo3.svg" alt="Memory 3" />
+            <figcaption>Some moments don’t need an explanation.</figcaption>
+          </figure>
+          <figure class="photo-card" tabindex="0">
+            <img src="images/photo4.svg" alt="Memory 4" />
+            <figcaption>Just another memory that deserves a place here.</figcaption>
+          </figure>
+          <figure class="photo-card" tabindex="0">
+            <img src="images/photo5.svg" alt="Memory 5" />
+            <figcaption>The kind of memory that feels warm even years later.</figcaption>
+          </figure>
+          <figure class="photo-card" tabindex="0">
+            <img src="images/photo6.svg" alt="Memory 6" />
+            <figcaption>A reminder that good things often appear quietly.</figcaption>
+          </figure>
+        </div>
+
+        <div class="nav-row">
+          <a class="nav-button" href="page2.html">← Previous</a>
+          <a class="nav-button" href="page4.html">Continue the journey →</a>
+        </div>
+      </div>
+    </main>
+
+    <div class="lightbox" aria-label="Expanded memory" role="dialog" aria-modal="true">
+      <button class="close-lightbox" type="button" aria-label="Close image">×</button>
+      <div class="lightbox-panel">
+        <img class="lightbox-image" src="images/photo1.svg" alt="Memory" />
+        <div class="lightbox-caption caption"></div>
+      </div>
+    </div>
+
+    <script src="js/script.js?v=gallery7"></script>
+  </body>
+</html>

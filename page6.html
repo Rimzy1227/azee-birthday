@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Final Surprise</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="page6">
+    <button class="music-toggle" type="button" aria-label="Toggle music">♫</button>
+
+    <main class="page-shell page-quiet">
+      <div class="starfield" aria-hidden="true"></div>
+      <div class="sparkles" aria-hidden="true"></div>
+
+      <div class="progress-indicator" aria-label="Page progress"></div>
+
+      <div class="page container">
+        <section class="section-heading">
+          <div class="kicker">A few things you should know</div>
+          <h2>A Few Things You Should Know...</h2>
+        </section>
+
+        <div class="quote-wall" aria-live="polite">
+          <div class="quote-card glass-card">
+            <p data-quote-text></p>
+          </div>
+        </div>
+
+        <div class="cta-row">
+          <button class="primary-btn" type="button" data-next-quote>Give me another →</button>
+        </div>
+
+        <div class="final-card" style="margin-top: 2rem;">
+          <div class="kicker">Wait...</div>
+          <h3>One last thing.</h3>
+          <button class="primary-btn" type="button" data-final-reveal>Open It ✨</button>
+          <div class="scrapbook-reveal" aria-live="polite">
+            <div class="huge-title" data-birthday-name>Happy Birthday, Azeeka!</div>
+            <img src="images/scrapbook-birthday-card.svg" alt="Handmade scrapbook friendship birthday card for Azee" />
+            <p class="message" data-personal-note>To Azee, you are one of the most wonderful person I know.</p>
+          </div>
+        </div>
+
+        <div class="fortune-box" aria-live="polite">Birthday Fortune ✨</div>
+
+        <div class="cta-row question-wall">
+          <button class="secondary-btn" type="button" data-open-fortune>There might be one more thing...</button>
+        </div>
+
+        <div class="nav-row">
+          <a class="nav-button" href="page5.html">← Previous</a>
+        </div>
+      </div>
+    </main>
+
+    <div class="hidden-star" aria-label="Secret star" title="Try clicking 5 times"></div>
+
+    <script src="js/script.js?v=decorations5"></script>
+  </body>
+</html>
