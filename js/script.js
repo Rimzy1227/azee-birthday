@@ -454,8 +454,8 @@ function initEasterEgg() {
     if (clicks >= 5) {
       const message = document.createElement('div');
       message.className = 'fortune-box show';
-      message.style.marginTop = '1.5rem';message.style.fontFamily = '"Parisienne", cursive';
-      message.textContent = 'You found the secret. Okay... you are officially too curious 😂 Happy Birthday to my favorite Azee Kutty🫶!';
+      message.style.marginTop = '1.5rem';message.style.fontFamily = '"Parisienne", cursive'; message.style.whiteSpace = 'pre-line'; message.style.textAlign = 'center';
+      message.textContent = 'You found the secret. Okay... you are officially too curious 😇\nHappy Birthday to my favorite Azee Kutty🫶!';
       const parent = document.querySelector('.question-wall') || document.querySelector('.final-card');
       if (parent) parent.appendChild(message);
       star.remove();
