@@ -294,13 +294,13 @@ function initCakeReveal() {
       setTimeout(() => candle.classList.add('off'), index * 260);
     });
     if (revealText) {
-      revealText.textContent = 'Make a wish... blow out the candles ✨';
+      revealText.textContent = 'Make a wish... blow out the candles 🤗';
       revealText.style.opacity = '1';
       revealText.style.transform = 'translateY(0)';
     }
     createConfettiBurst(window.innerWidth / 2, 210);
     setTimeout(() => {
-      if (revealText) revealText.textContent = "Actually... today's wish is for YOU. ✨";
+      if (revealText) revealText.textContent = "Actually... today's wish is for YOU. 😍";
     }, 1700);
   };
 
@@ -333,7 +333,13 @@ function initGallery() {
         lightboxImage.src = image.src;
         lightboxImage.alt = image.alt;
       }
-      if (lightboxCaption) lightboxCaption.textContent = caption ? caption.textContent : galleryCaptions[index] || 'A lovely memory';
+      if (lightboxCaption) {
+        if (caption) {
+          lightboxCaption.innerHTML = caption.innerHTML;
+        } else {
+          lightboxCaption.textContent = galleryCaptions[index] || 'A lovely memory';
+        }
+      }
       if (lightboxPanel) {
         lightboxPanel.className = 'lightbox-panel';
         void lightboxPanel.offsetWidth;
@@ -449,7 +455,7 @@ function initEasterEgg() {
       const message = document.createElement('div');
       message.className = 'fortune-box show';
       message.style.marginTop = '1.5rem';
-      message.textContent = 'You found the secret. Okay... you are officially too curious 😂 Happy Birthday to my favorite Azee Kutty!';
+      message.textContent = 'You found the secret. Okay... you are officially too curious 😂 Happy Birthday to my favorite Azee Kutty🫶!';
       const parent = document.querySelector('.question-wall') || document.querySelector('.final-card');
       if (parent) parent.appendChild(message);
       star.remove();

@@ -53,6 +53,14 @@ body[data-page="page5"] {
     linear-gradient(135deg, #11152b, #241d3d 48%, #3b2448);
 }
 
+body[data-page="page4"] {
+  background:
+    radial-gradient(circle at 12% 20%, rgba(255, 177, 211, 0.24), transparent 22%),
+    radial-gradient(circle at 88% 28%, rgba(159, 231, 255, 0.18), transparent 24%),
+    radial-gradient(circle at 50% 100%, rgba(247, 216, 140, 0.12), transparent 28%),
+    linear-gradient(135deg, #101326, #211b3d 48%, #3b2345);
+}
+
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 button, input, textarea { font: inherit; }
@@ -537,11 +545,11 @@ h3 {
 }
 
 .photo-card figcaption {
-  color: var(--text-soft); font-size: 0.88rem; line-height: 1.5; padding-top: 0.7rem;
+  color: var(--text-soft); font-size: 0.88rem; line-height: 1.5; padding-top: 0.7rem; text-align: center
 }
 
 .photo-card figcaption span {
-  display: block;
+  display: block; font-family: "Dancing Script", cursive; font-size: 0.92rem;
 }
 
 .photo-card .memory-keyword {
@@ -574,7 +582,18 @@ h3 {
 }
 
 .lightbox-panel .caption {
-  padding: 0.9rem 0.4rem 0.2rem; color: var(--text-soft); line-height: 1.7;
+  padding: 0.9rem 0.4rem 0.2rem; color: var(--text-soft); line-height: 1.7; 
+}
+
+.lightbox-panel .caption .memory-keyword {
+  display: block; margin-bottom: 0.25rem; color: #ffe6a8;
+  font-family: "Segoe Print", "Bradley Hand", cursive; font-size: 1.25rem; font-weight: 700;
+  text-align: center; text-shadow: 0 2px 10px rgba(255, 210, 133, 0.24);
+}
+
+.lightbox-panel .caption span {
+  display: block; text-align: center; font-family: "Dancing Script", cursive;
+    font-size: 1rem;
 }
 
 .close-lightbox {
@@ -589,6 +608,33 @@ h3 {
   border-radius: 24px; padding: 1.1rem; min-height: 160px; cursor: pointer; position: relative; overflow: hidden; transition: transform 0.3s ease, border-color 0.3s ease, opacity 0.3s ease;
   opacity: 1; transform: none;
 }
+
+.appreciation-gallery .special-card {
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  min-height: 215px; padding: 1.2rem 1rem 1.1rem;
+  background-size: cover; background-position: center; border-color: rgba(255,255,255,0.18);
+}
+
+.appreciation-gallery .special-card::after {
+  content: ""; position: absolute; inset: 0; z-index: 0; opacity: 0.72; pointer-events: none;
+  background: radial-gradient(circle at 50% 15%, rgba(255,255,255,0.18), transparent 28%), linear-gradient(180deg, transparent 22%, rgba(7, 8, 20, 0.66) 100%);
+}
+
+.appreciation-gallery .special-card > * { z-index: 1; }
+.appreciation-gallery .card-smile { background-image: linear-gradient(135deg, rgba(255,143,197,0.35), rgba(76,39,88,0.7)); }
+.appreciation-gallery .card-energy { background-image: linear-gradient(135deg, rgba(255,216,138,0.42), rgba(72,43,105,0.72)); }
+.appreciation-gallery .card-kindness { background-image: linear-gradient(135deg, rgba(255,215,125,0.38), rgba(55,77,78,0.72)); }
+.appreciation-gallery .card-personality { background-image: linear-gradient(135deg, rgba(159,231,255,0.4), rgba(84,51,118,0.74)); }
+.appreciation-gallery .card-memories { background-image: linear-gradient(135deg, rgba(215,196,255,0.4), rgba(49,41,86,0.78)); }
+.appreciation-gallery .card-you { background-image: linear-gradient(135deg, rgba(255,180,217,0.42), rgba(106,42,85,0.76)); }
+
+.card-icon {
+  display: grid; place-items: center; width: 54px; height: 54px; margin: 0.15rem 0 0.35rem;
+  border-radius: 50%; background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.28);
+  font-size: 1.9rem; box-shadow: 0 8px 18px rgba(0,0,0,0.2); animation: iconBreathe 3s ease-in-out infinite;
+}
+
+.appreciation-gallery .special-card h3 { margin: 0.25rem 0 0.45rem; }
 
 .special-card:hover {
   transform: translateY(-4px);
@@ -606,13 +652,17 @@ h3 {
 
 .special-card .reveal {
   max-height: 0; opacity: 0; overflow: hidden; transition: max-height 0.45s ease, opacity 0.35s ease, margin-top 0.3s ease;
-  color: var(--text-soft); line-height: 1.7; margin-top: 0;
-  display: block;
+  color: rgba(255,255,255,0.92); line-height: 1.65; margin-top: 0; display: grid; place-items: center;
+  width: 100%; font-size: 0.98rem; text-align: center; font-family: "Caveat", cursive;
+    font-size: 1rem;
 }
 
 .special-card.open .reveal {
-  max-height: 220px; opacity: 1; margin-top: 0.9rem;
+  max-height: 160px; opacity: 1; margin-top: 0.85rem; padding: 0.75rem 0.85rem;
+  background: rgba(9, 10, 24, 0.48); border: 1px solid rgba(255,255,255,0.14); border-radius: 15px;
 }
+
+@keyframes iconBreathe { 0%, 100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-4px) rotate(2deg); } }
 
 .poem-box {
   position: relative; isolation: isolate; overflow: hidden;
@@ -640,7 +690,8 @@ h3 {
 
 .poem-lines .line {
   opacity: 0; transform: translateY(16px); display: block; transition: opacity 0.8s ease, transform 0.8s ease;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: Georgia, "Times New Roman", serif; 
+  /*font-family: "Aphrodite Pro", cursive; src: url("./fonts/AphroditePro.woff2") format("woff2");*/
 }
 
 .poem-lines .line.visible {
@@ -670,7 +721,7 @@ body[data-page="page6"] .quote-wall + .cta-row {
   margin-top: 1rem;
 }
 
-.quote-card p { margin: 0; }
+.quote-card p { margin: 0; text-align: center; font-family: "Comic Sans MS", "Comic Sans", cursive; font-size: 1.05rem; font-weight: 500; letter-spacing: 0.015em; line-height: 1.55; }
 
 .final-card {
   position: relative; overflow: hidden; border-radius: 30px; padding: clamp(1.3rem, 3vw, 2.2rem);
